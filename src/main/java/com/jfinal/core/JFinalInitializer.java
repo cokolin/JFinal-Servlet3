@@ -81,7 +81,7 @@ public abstract class JFinalInitializer {
 	 * @return
 	 */
 	protected String[] mapping() {
-		return new String[] { "/*" };
+		return new String[] { "/" };
 	}
 
 	/**
