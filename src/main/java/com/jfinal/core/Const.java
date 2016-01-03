@@ -24,7 +24,7 @@ import com.jfinal.render.ViewType;
  */
 public interface Const {
 	
-	String JFINAL_VERSION = "2.0.x";
+	String JFINAL_VERSION = "2.0.0";
 	
 	ViewType DEFAULT_VIEW_TYPE = ViewType.FREE_MARKER;
 	
@@ -43,7 +43,7 @@ public interface Const {
 	//"WEB-INF/download" + File.separator maybe better otherwise it can be downloaded by browser directly
 	String DEFAULT_FILE_RENDER_BASE_PATH = File.separator + "download" + File.separator;
 	
-	long DEFAULT_MAX_POST_SIZE = 1024 * 1024 * 10;  			// Default max post size of multipart request: 10 Meg
+	long DEFAULT_MAX_POST_SIZE = 1024 * 1024 * 10;  			// Default max post size of multipart request: 10 MiB
 	
 	int DEFAULT_FILE_SIZE_THRESHOLD = 1024 * 16;        // Default upload file size in threshold
 	

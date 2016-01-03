@@ -22,6 +22,7 @@ public abstract class JFinalInitializer {
 		JFinalServlet jfinalServlet = new JFinalServlet(jfinalConfig());
 
 		ServletRegistration.Dynamic dynamic = ctx.addServlet(servletName(), jfinalServlet);
+		dynamic.setAsyncSupported(isAsyncSupported());
 		dynamic.setMultipartConfig(multipartConfig());
 		dynamic.setLoadOnStartup(loadOnStartup());
 		dynamic.addMapping(mapping());
@@ -81,6 +82,15 @@ public abstract class JFinalInitializer {
 	 */
 	protected String[] mapping() {
 		return new String[] { "/*" };
+	}
+
+	/**
+	 * is servlet3.0 asynchronous operations Supported
+	 * 
+	 * @return
+	 */
+	protected boolean isAsyncSupported() {
+		return true;
 	}
 
 	/**
